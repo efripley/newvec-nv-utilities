@@ -4,17 +4,19 @@ function App(){
 	}
 
 	this.run = function(){
-		for(var ay = 0; ay < 25; ay++){
-			for(var ax = 0; ax < 80; ax++){
-				display.putc(nvRand(256), ax, ay, nvRand(16), nvRand(16));
-			}
+		if(display.ready){
+		  for(var ay = 0; ay < 25; ay++){
+			  for(var ax = 0; ax < 80; ax++){
+				  display.putc(nvRand(256), ax, ay, nvRand(16), nvRand(16));
+			  }
+		  }
+  
+		  display.puts(" FPS: " + frameRate.update() + " ", 0, 0, display.WHITE, display.BLACK);
+  
+		  display.flip();
+  
+		  window.setTimeout(function(){app.run();}, 10);
 		}
-
-		display.puts(" FPS: " + frameRate.update() + " ", 0, 0, display.WHITE, display.BLACK);
-
-		display.flip();
-
-		window.setTimeout(function(){app.run();}, 10);
 	}
 }
 
