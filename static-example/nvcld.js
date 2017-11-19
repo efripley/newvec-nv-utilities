@@ -240,9 +240,9 @@ function NVCLD(container, font){
 
   this.initFonts = function(){
 	  fonts.push(document.getElementById(font));
-	  fonts[0].style.display = "none";
 	  while(!fonts[0].complete){};
-  
+	  fonts[0].style.display = "none";
+
     fonts.push(this.genFontColor(this.DARKGRAY));
     fonts.push(this.genFontColor(this.LIGHTGRAY));
     fonts.push(this.genFontColor(this.WHITE));
