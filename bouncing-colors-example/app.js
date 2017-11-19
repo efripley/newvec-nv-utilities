@@ -3,10 +3,6 @@ function App(){
   var frameTime = 50;
   var currentTime = new Date().getTime();
   this.init = function(){
-    display.init("display", "font");
-
-    console.log("display initialized");
-
     for(var a = 0; a < 16; a++){
       objects.push(new BouncingObject('O', a, display.BLACK));
       objects.push(new BouncingObject('O', display.BLACK, a));
@@ -36,6 +32,6 @@ function App(){
   }
 }
 
+var display = new NVCLD("display1", "font");
 var app = new App();
-var display = new NVCLI();
 app.init();
