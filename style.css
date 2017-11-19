@@ -1,0 +1,50 @@
+body{
+  height: 100%;
+	background-image: url(blue-circuits-lg.jpg);
+  background-size: cover;
+  margin: 0;
+  font: 400 16px/1.25em sans-serif;
+}
+.left-area-wdg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 175px;
+  background-color: rgba(0,0,0,.9);
+  color: #fff;
+}
+.left-area-wdg .menu{
+  margin: 0;
+  padding: 0;
+}
+.left-area-wdg .item{
+  list-style: none;
+}
+.left-area-wdg .link{
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+.left-area-wdg .link:hover{
+  color: #444;
+  background-color: #fff;
+}
+.main-area-wdg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 150px);
+  display: flex;
+}
+.main-area-wdg .text-cmp{
+  margin: auto;
+  display: block;
+  padding: 25px;
+  background-color: rgba(0,0,0,.9);
+  color: #fff;
+  width: 80%;
+}

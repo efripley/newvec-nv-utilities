@@ -1,0 +1,9 @@
+Goal: To create an example of nvcli that demonstrates the different background colors and font colors available. This demonstration will be performed through a fun little webapp that bounces characters of different colors and backgrounds off the walls and eachother.
+
+--Objects that bounce off walls and other objects
+----Movement with speed and direction
+----Char representation with font color and background color
+----Collision with other objects
+----Collision with predefined constraints
+----Trajectory calculation
+----Drawing function
