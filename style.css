@@ -14,9 +14,35 @@ body{
   background-color: rgba(0,0,0,.9);
   color: #fff;
 }
+@media(max-width: 480px){
+  .left-area-wdg{
+    position: relative;
+    width: 100%;
+    bottom: unset;
+  }
+}
 .left-area-wdg .menu{
   margin: 0;
   padding: 0;
+}
+@media(max-width: 480px){
+  .left-area-wdg .menu{
+    display: none;
+  }
+  .left-area-wdg .menu.visible{
+    display: block;
+  }
+}
+.left-area-wdg .menu-btn{
+  display: none;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+}
+@media(max-width: 480px){
+  .left-area-wdg .menu-btn{
+    display: block;
+  }
 }
 .left-area-wdg .item{
   list-style: none;
@@ -39,6 +65,14 @@ body{
   right: 0;
   width: calc(100% - 150px);
   display: flex;
+}
+@media(max-width: 480px){
+  .main-area-wdg{
+    position: relative;
+    bottom: unset;
+    width: 100%;
+    margin-top: 10px
+  }
 }
 .main-area-wdg .text-cmp{
   margin: auto;
