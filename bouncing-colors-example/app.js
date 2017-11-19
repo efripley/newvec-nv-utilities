@@ -27,9 +27,8 @@ function App(){
   
       display.flip();
     }
+    window.setTimeout(app.run, 10);
   }
-
-  window.setTimeout(app.run, 10);
 }
 
 var display = new NVCLD("display1", "font");
