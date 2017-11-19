@@ -14,9 +14,9 @@ function App(){
 		  display.puts(" FPS: " + frameRate.update() + " ", 0, 0, display.WHITE, display.BLACK);
   
 		  display.flip();
-  
-		  window.setTimeout(function(){app.run();}, 10);
 		}
+  
+    window.setTimeout(function(){app.run();}, 10);
 	}
 }
 

@@ -5,6 +5,8 @@ function App(){
   this.init = function(){
     display.init("display", "font");
 
+    console.log("display initialized");
+
     for(var a = 0; a < 16; a++){
       objects.push(new BouncingObject('O', a, display.BLACK));
       objects.push(new BouncingObject('O', display.BLACK, a));
@@ -14,19 +16,21 @@ function App(){
   }
 
   this.run = function(){
-    var doUpdate = false
-    if(new Date().getTime() - currentTime >= frameTime){
-      doUpdate = true;
-      currentTime = new Date().getTime();
+    if(display.ready){
+      var doUpdate = false
+      if(new Date().getTime() - currentTime >= frameTime){
+        doUpdate = true;
+        currentTime = new Date().getTime();
+      }
+  
+      for(var a = 0; a < 32; a++){
+        if(doUpdate)
+          objects[a].update();
+        objects[a].draw();
+      }
+  
+      display.flip();
     }
-
-    for(var a = 0; a < 32; a++){
-      if(doUpdate)
-        objects[a].update();
-      objects[a].draw();
-    }
-
-    display.flip();
 
     window.setTimeout(app.run, 10);
   }
